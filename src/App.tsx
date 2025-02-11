@@ -1,5 +1,15 @@
+import { Intersection } from './components/Intersection';
+import { Scene } from './components/Scene';
+
 function App() {
-  return <h1>Hey, world.</h1>;
+  return (
+    <div className="h-[600px] w-[800px]">
+      <div className="absolute flex flex-row justify-center">
+        <Scene />
+      </div>
+      <Intersection />
+    </div>
+  );
 }
 
 export { App };
