@@ -1,6 +1,6 @@
 import { TrafficLight } from '../TrafficLight';
 import { Vehicles } from '../Vehicles';
-import { useTrafficLightController } from '../../hooks/useTrafficController';
+import { useTrafficLightController } from '../../hooks/useTrafficLightController';
 
 /**
  * A component that models the intersection of two roads.

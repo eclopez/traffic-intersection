@@ -37,8 +37,14 @@ const DIRECTION_CHANGE_DURATION = 2000;
 function useTrafficLightController(initialDirection: Direction) {
   const [direction, setDirection] = React.useState<Direction>(initialDirection);
   const [lights, setLights] = React.useState<TrafficLightsState>({
-    longitudinal: TrafficLightConfig.RedGreen,
-    latitudinal: TrafficLightConfig.Red,
+    longitudinal:
+      initialDirection === 'longitudinal'
+        ? TrafficLightConfig.RedGreen
+        : TrafficLightConfig.Red,
+    latitudinal:
+      initialDirection === 'latitudinal'
+        ? TrafficLightConfig.RedGreen
+        : TrafficLightConfig.Red,
   });
   // Indicates whether all lights are going to be red next cycle
   // Having this in React state ensures that the interval is cleared when changed

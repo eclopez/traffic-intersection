@@ -86,10 +86,19 @@ function TrafficLight(props: TrafficLightProps) {
         className,
       )}
     >
-      <div className={cx(classes.red({ lightConfig }))}></div>
-      <div className={cx(classes.yellow({ lightConfig }))}></div>
-      <div className={cx(classes.green({ lightConfig }))}></div>
-      <div className="h-16 w-16 rounded-full">
+      <div
+        data-testid="red-light"
+        className={cx(classes.red({ lightConfig }))}
+      ></div>
+      <div
+        data-testid="yellow-light"
+        className={cx(classes.yellow({ lightConfig }))}
+      ></div>
+      <div
+        data-testid="green-light"
+        className={cx(classes.green({ lightConfig }))}
+      ></div>
+      <div data-testid="arrow-light" className="h-16 w-16 rounded-full">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 463.95">
           <path
             className={cx(classes.arrow({ lightConfig }))}
