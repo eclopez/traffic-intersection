@@ -1,8 +1,22 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import tailwindcss from "@tailwindcss/vite";
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite';
+
+const removeCrossorigin = () => {
+  return {
+    name: 'remove-crossorigin',
+    transformIndexHtml(html: string) {
+      return html.replaceAll(`crossorigin `, '');
+    },
+  };
+};
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  base: './',
+  plugins: [react(), tailwindcss(), removeCrossorigin()],
+  build: {
+    outDir: 'docs',
+    sourcemap: true,
+  },
 });

@@ -2,6 +2,8 @@
 
 This project is a simulation of an intersection and the traffic light controllers. Each road on the intersection has 4 lanes, one lane dedicated for left turns, one for right turns, and two for proceeding straight. The application manages traffic lights and simulates vehicle arrivals and departures at an intersection. The simulation is written in React, with Vite, Vitest, and TailwindCSS.
 
+You can view a live preview [here](https://eclopez.github.io/traffic-intersection).
+
 ![Traffic Intersection Screenshot](./files/screenshot.png)
 
 ## Installation
