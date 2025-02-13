@@ -1,9 +1,10 @@
-import * as React from "react";
-import { createRoot } from "react-dom/client";
-import { App } from "./App";
+import * as React from 'react';
+import { render } from 'react-dom';
+import { App } from './App';
 
-createRoot(document.getElementById("app")!).render(
+render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById('app'),
 );
